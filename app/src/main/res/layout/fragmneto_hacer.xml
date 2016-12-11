@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/FramePrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <include layout="@layout/videos_itme" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BtnAmbientesFamiliares"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/BtnAmbientesFamiliares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/boton_redondo"
+        android:drawableLeft="@drawable/busqueda"
+        android:drawablePadding="30dp"
+        android:paddingLeft="35dp" />
+
+    <Button
+        android:id="@+id/BtnTercero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnCuarto"
+        android:layout_alignStart="@+id/BtnCuarto"
+        android:layout_below="@+id/BtnSegundo"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/boton_redondo" />
+
+    <Button
+        android:id="@+id/BtnCuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/boton_redondo"
+        android:drawableLeft="@drawable/ic_about"
+        android:paddingLeft="25dp" />
+
+    <Button
+        android:id="@+id/BtnSegundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BtnCuarto"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/boton_redondo" />
+
+    <Button
+        android:id="@+id/BtnQuinto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/BtnTercero"
+        android:layout_gravity="center"
+        android:background="@drawable/boton_redondo" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView5"
+        android:layout_gravity="center"
+        android:background="@drawable/boton_redondo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BtnAmbientesFamiliares"
+        android:layout_below="@+id/BtnAmbientesFamiliares"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:text="Espacios Publicos"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/BtnCuarto"
+        android:layout_alignRight="@+id/BtnCuarto"
+        android:layout_alignTop="@+id/BtnSegundo"
+        android:gravity="center"
+        android:paddingLeft="4dp"
+        android:paddingRight="6dp"
+        android:text="Consumo de Drogas"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BtnQuinto"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5"
+        android:gravity="center"
+        android:text="Exclusion Social"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BtnQuinto"
+        android:gravity="center"
+        android:text="Capital Social\nDebilitado"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView4"
+        android:gravity="center"
+        android:text="Ambientes familiares\n deteriorados"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Deserción\nEscolar"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+</RelativeLayout>

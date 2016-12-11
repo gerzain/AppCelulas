@@ -1,0 +1,19 @@
+<resources>
+    <string name="titulo_actividad_configuracion">Configuración</string>
+
+    <string name="categoria_notificaciones">Desarrollada por</string>
+
+    <string name="titulo_preferencia">Idioma</string>
+    <string name="key_preferencia">lista_frecuencias</string>
+    <string-array name="lista_frecuencia">
+        <item>Inglés</item>
+        <item>Español</item>
+
+    </string-array>
+    <string-array name="lista_valores_frecuencia">
+        <item>0</item>
+        <item>1</item>
+
+    </string-array>
+
+</resources>

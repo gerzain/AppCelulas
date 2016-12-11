@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/item_noticias"
+            android:icon="@drawable/ic_noticias"
+            android:title="Noticias" />
+        <item
+            android:id="@+id/item_infografia"
+            android:icon="@drawable/ic_about"
+            android:title="Descubre" />
+        <item
+            android:id="@+id/item_hacer"
+            android:icon="@drawable/ic_acerca"
+            android:title="¿Qué hacer?" />
+        <item
+            android:id="@+id/item_perfil"
+            android:icon="@drawable/usuario"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/item_reconpensas"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Reconpensas" />
+        <item
+            android:id="@+id/item_Participa"
+            android:icon="@drawable/icono_ubicacion"
+            android:title="Participa" />
+
+
+        <item
+            android:id="@+id/configuration_section"
+            android:title="@string/configuracion_item">
+            <menu>
+                <item
+                    android:id="@+id/nav_log_out"
+                    android:icon="@android:drawable/ic_lock_power_off"
+                    android:title="@string/log_out_item" />
+            </menu>
+        </item>
+
+
+    </group>
+
+</menu>

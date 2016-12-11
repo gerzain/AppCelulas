@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="New Text"
+        android:textColor="@color/accentColor"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/song_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/song_title"
+        android:layout_alignStart="@+id/song_title"
+        android:layout_below="@+id/song_title"
+        android:layout_marginTop="20dp"
+        android:text="New Text"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/song_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/song_year"
+        android:text="New Text"
+        android:textColor="#000" />
+
+    <ImageView
+        android:id="@+id/iv_perfil_page"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_about"
+        android:layout_below="@+id/song_year"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

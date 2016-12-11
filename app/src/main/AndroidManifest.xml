@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.celulasdepaz">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Interfaces.CelulasPazApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.RicoPaRico">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name=".Interfaces.ActividadLogueo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Interfaces.ActividadPrincipal"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ConNavigationDrawer" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Interfaces.ActividadConfiguracion"
+            android:label="@string/actividad_confi"
+            android:parentActivityName=".Interfaces.ActividadPrincipal">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:screenOrientation="portrait"
+                android:value="com.developer.celulasdepaz.Interfaces.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".Interfaces.DetalleNoticia"
+            android:parentActivityName=".Interfaces.ActividadPrincipal"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:screenOrientation="portrait"
+            android:value="com.developer.celulasdepaz.Interfaces.ActividadPrincipal" />
+
+        <activity
+            android:name=".Interfaces.FragmentEspaciosPublicos"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Interfaces.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".Interfaces.FragmentConsumoDrogas"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Interfaces.ActividadPrincipal" />
+        </activity>
+        <activity android:name=".Interfaces.FragmentoExlusionSocial" />
+        <activity android:name=".Interfaces.FragmentoCapitalSocialDebilitado" />
+        <activity android:name=".Interfaces.AmbientesFamiliares" />
+        <activity android:name=".Interfaces.FragmentDesercionEscolar" />
+        <activity
+            android:name=".Interfaces.ActividadFacebookPost"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:screenOrientation="portrait"
+            android:value="com.developer.celulasdepaz.Interfaces.ActividadPrincipal" />
+
+        <provider
+            android:name=".modelo.ProviderEventos"
+            android:authorities="com.developer.celulasdepaz"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".VideoActivity.EspaciosPublicos"></activity>
+    </application>
+
+</manifest>

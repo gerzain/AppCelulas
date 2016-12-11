@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="categoria_notificaciones"
+        android:title="@string/cambiar_idioma">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/lista_frecuencia"
+            android:entryValues="@array/lista_valores_frecuencia"
+            android:key="@string/key_preferencia"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:summary="Presiona para ver los idiomas disponibles"
+            android:title="@string/titulo_preferencia" />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>

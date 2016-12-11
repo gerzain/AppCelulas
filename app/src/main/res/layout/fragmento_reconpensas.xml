@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:alignmentMode="alignBounds"
+    android:columnCount="1"
+    android:rowCount="8">
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_regalo_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_regalo_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_regalo_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_1_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_regalo_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Regalo 1" />
+
+        <TextView
+            android:id="@+id/txt_regalo_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Regalo 2" />
+
+        <TextView
+            android:id="@+id/txt_regalo_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Regalo 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/appbar_padding_top">
+
+        <ImageButton
+            android:id="@+id/btn_premio_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_premio_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_premio_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_2_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_premio_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Premio 1" />
+
+        <TextView
+            android:id="@+id/txt_premio_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Premio 2" />
+
+        <TextView
+            android:id="@+id/txt_premio_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Premio 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/appbar_padding_top">
+
+        <ImageButton
+            android:id="@+id/btn_cupon_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_cupon_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_cupon_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_3_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_cupon_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cupón 1" />
+
+        <TextView
+            android:id="@+id/txt_cupon_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cupón 2" />
+
+        <TextView
+            android:id="@+id/txt_cupon_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cupón 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/appbar_padding_top">
+
+        <ImageButton
+            android:id="@+id/btn_sorpresa_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_sorpresa_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+
+        <ImageButton
+            android:id="@+id/btn_sorpresa_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/boton_recompensa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmento_recompensas_fila_4_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_sorpresa_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sorpresa 1" />
+
+        <TextView
+            android:id="@+id/txt_sorpresa_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sorpresa 2" />
+
+        <TextView
+            android:id="@+id/txt_sorpresa_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sorpresa 3" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/barra_progreso_recompensas"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/appbar_padding_top"
+        android:max="100"
+        android:maxHeight="20dip"
+        android:minHeight="20dip"
+        android:progress="75" />
+
+</GridLayout>

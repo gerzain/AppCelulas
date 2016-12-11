@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/FragNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid_round"
+            android:columnWidth="120dp"
+            android:horizontalSpacing="@dimen/espacio_grilla"
+            android:numColumns="auto_fit"
+            android:padding="@dimen/espacio_grilla"
+            android:verticalSpacing="@dimen/espacio_grilla" />
+    </FrameLayout>
+
+</RelativeLayout>
