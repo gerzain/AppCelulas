@@ -64,6 +64,7 @@ public class FragmentPostFacebook extends Fragment {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int STORAGE_PERMISSION_CODE = 123;
+    static final Integer CAMERA = 0x5;
     public String path;
     public Uri direccion;
     Button btnCamara;
@@ -89,7 +90,8 @@ public class FragmentPostFacebook extends Fragment {
         publicar = (Button) view.findViewById(R.id.btnPublicar);
         subir_foto = (ImageView) view.findViewById(R.id.BtnCamara);
         bitmap = null;
-        requestStoragePermission();
+       // requestStoragePermission();
+        CameraPermission();
 
         btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,8 +134,8 @@ public class FragmentPostFacebook extends Fragment {
             @Override
             public void onClick(View view) {
 
-                // Share();
-                Compartir();
+                 Share();
+                //Compartir();
 
 
             }
@@ -148,7 +150,8 @@ public class FragmentPostFacebook extends Fragment {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         //Checking the request code of our request
-        if (requestCode == STORAGE_PERMISSION_CODE) {
+        if (requestCode == CAMERA)
+        {
 
             //If permission is granted
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -174,20 +177,45 @@ public class FragmentPostFacebook extends Fragment {
         ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
     }
 
+    private void askForPermission(String permission, Integer requestCode) {
+        if (ContextCompat.checkSelfPermission(getActivity(), permission) != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), permission)) {
+
+                //This is called if user has denied the permission before
+                //In this case I am just asking the permission again
+                ActivityCompat.requestPermissions(getActivity(), new String[]{permission}, requestCode);
+
+            } else {
+
+                ActivityCompat.requestPermissions(getActivity(), new String[]{permission}, requestCode);
+            }
+        } else {
+            Toast.makeText(getActivity(), "" + permission + " is already granted.", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void CameraPermission()
+    {
+        askForPermission(Manifest.permission.CAMERA,CAMERA);
+    }
+
 
     public void CargarImagen() {
         Intent galeria = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(galeria, 0);
     }
 
-    public void CargarImagenCamara() {
+    public void CargarImagenCamara()
+    {
         Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(camera, REQUEST_IMAGE_CAPTURE);
 
     }
 
 
-    public void Share() {
+    public void Share()
+    {
 
         LoginManager.getInstance().logInWithPublishPermissions(this, Arrays.asList("publish_actions"));
         SharePhoto photo = new SharePhoto.Builder()
@@ -197,7 +225,8 @@ public class FragmentPostFacebook extends Fragment {
                 .addPhoto(photo)
 
                 .build();
-        ShareApi.share(content, new FacebookCallback<Result>() {
+        ShareApi.share(content, new FacebookCallback<Result>()
+        {
             @Override
             public void onSuccess(Result result) {
 
@@ -241,21 +270,26 @@ public class FragmentPostFacebook extends Fragment {
     }
 
 
-    protected void getLikedPageInfo(LoginResult login_result) {
+    protected void getLikedPageInfo(LoginResult login_result)
+    {
 
         GraphRequest data_request = GraphRequest.newMeRequest(
                 login_result.getAccessToken(),
-                new GraphRequest.GraphJSONObjectCallback() {
+                new GraphRequest.GraphJSONObjectCallback()
+                {
                     @Override
                     public void onCompleted(
                             JSONObject json_object,
-                            GraphResponse response) {
+                            GraphResponse response)
+                    {
 
-                        try {
+                        try
+                        {
 
                             JSONArray posts = json_object.getJSONObject("likes").optJSONArray("data");
                             Log.e("data1", posts.toString());
-                            for (int i = 0; i < posts.length(); i++) {
+                            for (int i = 0; i < posts.length(); i++)
+                            {
 
                                 JSONObject post = posts.optJSONObject(i);
                                 String id = post.optString("id");
@@ -267,7 +301,8 @@ public class FragmentPostFacebook extends Fragment {
                                 Log.e("id -", id + " name -" + name + " category-" + category + " likes count -" + count);
                             }
 
-                        } catch (Exception e) {
+                        } catch (Exception e)
+                        {
                             e.printStackTrace();
                         }
 
@@ -286,11 +321,10 @@ public class FragmentPostFacebook extends Fragment {
         try {
             if (requestCode == 0 && resultCode == Activity.RESULT_OK && null != data) {
                 Uri selected_image = data.getData();
-                //Bitmap bitmap = null;
                 bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), selected_image);
                 subir_foto.setImageBitmap(bitmap);
                 direccion = selected_image;
-                Log.e("Imagen>>>", direccion.toString());
+               // Log.e("Imagen>>>", direccion.toString());
 
 
             } else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
@@ -304,7 +338,8 @@ public class FragmentPostFacebook extends Fragment {
             e.printStackTrace();
             Toast.makeText(getActivity(), "No puedes usar la imagen selecionada ", Toast.LENGTH_LONG).show();
 
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
 
         }
